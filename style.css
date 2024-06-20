@@ -334,7 +334,7 @@ button.criative-btn {
 }
 
 .image-item.large,
-.image-item.mob {
+.image-item.small {
   height: 430px;
 }
 
@@ -347,42 +347,66 @@ button.criative-btn {
   max-width: calc(100% / 3 - 100px);
 }
 
-.image-item.small img {
+.image-item img {
   object-position: top;
-  transition: transform 0.9s ease-in-out;
+  transition: transform 6s ease-in-out;
   transform: translateY(0);
 }
 
-.image-item.small:hover img {
+.image-item:hover img {
   transform: translateY(-50%);
 }
 
-.figma-link {
+.image-item img:only-child {
+  transform: translateY(0) !important;
+}
+.figma-link,
+.behance-link,
+.instagram-link {
   position: absolute;
   bottom: 10px;
   right: 10px;
 }
 
-.figma-icon {
-  width: 30px; /* Ajuste o tamanho conforme necessário */
+.figma-icon,
+.behance-icon,
+.instagram-icon {
+  width: 30px;
   height: 30px;
   cursor: pointer;
 }
 
-.view-button {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background-color: #6c63ff;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.view-button:hover {
-  background-color: #555;
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .image-item {
+    width: 80%;
+  }
+  .image-item.small {
+    max-width: 100%;
+  }
+  .image-item,
+  .image-item.small {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    display: flex;
+  }
+  .image-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: none !important;
+    transform: none !important;
+  }
+  img.figma-icon,
+  img.behance-icon,
+  img.instagram-icon {
+    display: none;
+  }
 }
 
 /*contact*/
