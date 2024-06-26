@@ -216,6 +216,15 @@ a.logo-container span {
     display: none;
   }
 }
+@media (max-width: 600px) {
+  a.lang-toggle {
+    display: none;
+  }
+  a.logo-container,
+  a.lang-toggle-mob {
+    font-size: 0.75em;
+  }
+}
 
 /*hero*/
 #hero {
@@ -422,6 +431,55 @@ button.criative-btn {
   }
 }
 
+/*carousel*/
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+  width: 100%;
+  font-family: var(--font-text);
+}
+.sectors {
+  color: var(--color-text-menu);
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.sector-item {
+  display: flex;
+  flex-basis: 20%;
+}
+.sector-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sector-content:hover {
+  color: var(--second-color);
+}
+.icon {
+  margin-right: 5px;
+  width: 24px;
+}
+.icon:hover {
+  width: 26px;
+}
+
+.sector-content img {
+  border: 2px dashed transparent;
+  transition: border 0.3s ease;
+}
+
+/* Alterar a cor da borda ao passar o mouse */
+.sector-content img:hover {
+  border: 1px dashed #a74aaf;
+  border-radius: 100%;
+}
+
 /*projects*/
 .projects-container {
   margin: 0;
@@ -553,6 +611,11 @@ button.criative-btn {
   background: #555;
 }
 
+.project-info {
+  top: 20%; /* Ajusta a posição do project-info */
+  left: 40%;
+}
+
 @media screen and (max-width: 1280px) {
   .projects-container {
     flex-direction: column;
@@ -560,23 +623,24 @@ button.criative-btn {
     margin: 100px 0;
   }
   .project-card {
-    width: 90%; /* Ajusta a largura do card */
-    height: auto; /* Permite que a altura seja ajustada conforme o conteúdo */
+    width: 90%;
+    height: auto;
+    display: flex;
+    text-align: center;
   }
-  .project-info {
-    top: 10px; /* Ajusta a posição do project-info */
-    left: 10px; /* Ajusta a posição do project-info */
-  }
+
   .project-info h3 {
-    font-size: 1.2em; /* Ajusta o tamanho da fonte */
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 5px;
   }
   .project-overlay {
     font-size: 10px;
     width: 100%;
-    padding: 5px; /* Ajusta o padding */
+    padding: 5px;
   }
   .project-image {
-    height: auto; /* Ajusta a altura da imagem */
+    height: auto;
   }
 }
 
@@ -584,11 +648,7 @@ button.criative-btn {
   .project-card {
     width: 500px;
   }
-  .project-info h3 {
-    font-size: 1.4em; /* Ajusta o tamanho da fonte */
-  }
   .project-overlay {
-    font-size: 11px;
     width: 100%;
     padding: 8px; /* Ajusta o padding */
   }
