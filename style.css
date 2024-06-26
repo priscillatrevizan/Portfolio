@@ -654,7 +654,6 @@ button.criative-btn {
   }
 }
 
-/*gallery*/
 .image-container {
   display: flex;
   flex-direction: column;
@@ -718,6 +717,7 @@ button.criative-btn {
 .image-item img:only-child {
   transform: translateY(0) !important;
 }
+
 .figma-link,
 .behance-link,
 .instagram-link {
@@ -734,18 +734,55 @@ button.criative-btn {
   cursor: pointer;
 }
 
+.hidden-mobile {
+  display: none;
+}
+
+.show-more,
+.show-less {
+  display: none;
+  text-align: center;
+  margin: 20px 0;
+  cursor: pointer;
+  font-family: var(--font-text);
+  font-size: 0.5em;
+  text-transform: uppercase;
+}
+
+.show-more,
+.show-less {
+  display: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .show-more,
+  .show-less {
+    display: inline-block;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .row {
     flex-direction: column;
     gap: 20px;
     align-items: center;
   }
+
   .image-item {
     width: 80%;
   }
+
   .image-item.small {
     max-width: 100%;
   }
+
   .image-item,
   .image-item.small {
     height: 300px;
@@ -753,6 +790,7 @@ button.criative-btn {
     overflow: hidden;
     display: flex;
   }
+
   .image-item img {
     width: 100%;
     height: 300px;
@@ -760,10 +798,19 @@ button.criative-btn {
     transition: none !important;
     transform: none !important;
   }
+
   img.figma-icon,
   img.behance-icon,
   img.instagram-icon {
     display: none;
+  }
+
+  .hidden-mobile {
+    display: none;
+  }
+
+  .show-more {
+    display: block;
   }
 }
 
@@ -832,4 +879,10 @@ button.criative-btn {
   .contact-container input {
     width: auto;
   }
+}
+
+#map {
+  height: 200px; /* A altura é de 400 pixels */
+  width: 100%; /* A largura é a largura da página web */
+  margin: 100px 0;
 }

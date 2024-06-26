@@ -31,3 +31,35 @@ document.addEventListener("DOMContentLoaded", function () {
     languageLink.addEventListener("click", toggleLanguage);
   });
 });
+
+/*image hero*/
+document.addEventListener("DOMContentLoaded", function () {
+  const heroImg = document.getElementById("hero-img");
+
+  heroImg.addEventListener("mouseover", function () {
+    heroImg.src = "./img/hero_img_pb.svg";
+  });
+
+  heroImg.addEventListener("mouseout", function () {
+    heroImg.src = "./img/hero_img.svg";
+  });
+});
+
+/*galery*/
+document.getElementById("showMore").addEventListener("click", function () {
+  let hiddenRows = document.querySelectorAll(".hidden-mobile");
+  hiddenRows.forEach(function (row) {
+    row.style.display = "flex";
+  });
+  document.getElementById("showMore").style.display = "none";
+  document.getElementById("showLess").style.display = "inline-block";
+});
+
+document.getElementById("showLess").addEventListener("click", function () {
+  let hiddenRows = document.querySelectorAll(".hidden-mobile");
+  hiddenRows.forEach(function (row) {
+    row.style.display = "none";
+  });
+  document.getElementById("showMore").style.display = "inline-block";
+  document.getElementById("showLess").style.display = "none";
+});
