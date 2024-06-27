@@ -9,6 +9,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+    <link rel="shortcut icon" type="imagex/png" href="./img/logo_ico_pb.ico">
   <!-- Slick Carousel CSS -->
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
@@ -41,15 +42,15 @@
         </button>
         <ul id="menu" role="menu">
           <li><a href="index-en.html" class="language-toggle"><span>EN / </span> PT</a></li>
-          <li><a href="#about" class="menu">Sobre</a></li>
-          <li><a href="#investors" class="menu">Skills</a></li>
-          <li><a href="#vacancies" class="menu">Projetos</a></li>
-          <li><a href="#footer" class="menu">Portfólio Criativo</a></li>
+          <li><a href="#hero" class="menu">Sobre</a></li>
+          <li><a href="#hard-skills" class="menu">Skills</a></li>
+          <li><a href="#projects" class="menu">Projetos</a></li>
+          <li><a href="#gallery" class="menu">Portfólio Criativo</a></li>
 
         </ul>
 
       </nav>
-      <a href="#" class="menu"><button class="contact-btn">Diga Oi!</button></a>
+      <a href="#contact" class="menu"><button class="contact-btn">Diga Oi!</button></a>
       </div>
 
     </section>
@@ -71,14 +72,14 @@
             contribuir de forma significativa. Para criar, inovar e aprimorar - seja em processos, sistemas ou
             relacionamentos. Vamos criar algo juntos?</p>
           <div class="buttons">
-            <button class="project-btn">Projetos</button>
-            <button class="criative-btn">Criativos</button>
+            <a href="#projects"><button class="project-btn">Projetos</button></a>
+            <a href="#gallery"><button class="criative-btn">Criativos</button></a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="hard-skills">
+    <section id="hard-skills">
       <div class="title-section">
         <h1>Hard<span> Skills</span></h1>
       </div>
@@ -100,13 +101,13 @@
           </div>
           <div class="skills-col3">
             <h3>Ferramentas</h3>
-            <img src="./img/github-icon.svg" alt="Github">
-            <img src="./img/vue-icon.svg" alt="Vue.js">
-            <img src="./img/js-icon.svg" alt="JavaScript">
-            <img src="./img/react-icon.svg" alt="React">
-            <img src="./img/ts-icon.svg" alt="TypeScript">
-            <img src="./img/nodejs-icon.svg" alt="Node.js">
-            <img src="./img/sass-icon.svg" alt="Sass">
+            <i class="fa-brands fa-css3-alt"></i>
+            <i class="fa-brands fa-js"></i>
+            <i class="fa-brands fa-vuejs"></i>
+            <i class="fa-brands fa-react"></i>
+            <i class="fa-brands fa-square-js"></i>
+            <i class="fa-brands fa-node"></i>
+            <i class="fa-brands fa-sass"></i>
           </div>
         </div>
       </div>
@@ -131,7 +132,7 @@
             <img src="./img/ai-icon.svg" alt="Github">
             <img src="./img/xd-icon.svg" alt="Vue.js">
             <img src="./img/ps-icon.svg" alt="JavaScript">
-            <img src="./img/figma-icon2.svg" alt="React">
+            <i class="fa-brands fa-figma"></i>
           </div>
         </div>
       </div>
@@ -219,73 +220,73 @@
       </div>
     </section>
 
-    <section class="projects">
+    <section id="projects">
       <div class="title-section">
         <h1>Projetos de<span> Desenvolvimento</span></h1>
       </div>
       <div class="projects-container">
-          <div class="project-card">
-            <img src="./img/calculadora_imc.png" alt="Calculadora IMC" class="project-image">
-            <div class="dark-overlay"></div>
-            <div class="project-info">
-              <h3>Calculadora IMC</h3>
-              <div class="technologies">
-                <img src="/img/js-icon.svg" alt="JavaScript">
-              </div>
-            </div>
-            <div class="project-overlay">
-              <p>jun.24</p>
-              <div class="project-btns">
-                <a href="https://calculadora-imc-blue-seven.vercel.app/" class="github-btn"><img
-                    src="./img/github-icon.svg" alt="View on Github" class="github-icon"></a>
-                <a href="https://calculadora-imc-blue-seven.vercel.app/" class="view-more-btn">Project On</a>
-              </div>
+        <div class="project-card">
+          <img src="./img/calculadora_imc.png" alt="Calculadora IMC" class="project-image">
+          <div class="dark-overlay"></div>
+          <div class="project-info">
+            <h3>Calculadora IMC</h3>
+            <div class="technologies">
+              <i class="fa-brands fa-js"></i>
             </div>
           </div>
+          <div class="project-overlay">
+            <p>jun.24</p>
+            <div class="project-btns">
+              <a href="https://calculadora-imc-blue-seven.vercel.app/"><i
+                  class="fa-brands fa-github github-btn"></i></a>
+              <a href="https://calculadora-imc-blue-seven.vercel.app/" class="view-more-btn">Project On</a>
+            </div>
+          </div>
+        </div>
 
-          <div class="project-card">
-            <img src="./img/calculadora_imc.png" alt="Calculadora IMC" class="project-image">
-            <div class="dark-overlay"></div>
-            <div class="project-info">
-              <h3>Calculadora IMC</h3>
-              <div class="technologies">
-                <img src="/img/js-icon.svg" alt="JavaScript">
-              </div>
-            </div>
-            <div class="project-overlay">
-              <p>jun.24</p>
-              <div class="project-btns">
-                <a href="https://calculadora-imc-blue-seven.vercel.app/" class="github-btn"><img
-                    src="./img/github-icon.svg" alt="View on Github" class="github-icon"></a>
-                <a href="https://calculadora-imc-blue-seven.vercel.app/" class="view-more-btn">Project On</a>
-              </div>
+        <div class="project-card">
+          <img src="./img/calculadora_imc.png" alt="Calculadora IMC" class="project-image">
+          <div class="dark-overlay"></div>
+          <div class="project-info">
+            <h3>Calculadora IMC</h3>
+            <div class="technologies">
+              <img src="/img/js-icon.svg" alt="JavaScript">
             </div>
           </div>
+          <div class="project-overlay">
+            <p>jun.24</p>
+            <div class="project-btns">
+              <a href="https://calculadora-imc-blue-seven.vercel.app/" class="github-btn"><img
+                  src="./img/github-icon.svg" alt="View on Github" class="github-icon"></a>
+              <a href="https://calculadora-imc-blue-seven.vercel.app/" class="view-more-btn">Project On</a>
+            </div>
+          </div>
+        </div>
 
-          <div class="project-card">
-            <img src="./img/calculadora_imc.png" alt="Calculadora IMC" class="project-image">
-            <div class="dark-overlay"></div>
-            <div class="project-info">
-              <h3>Calculadora IMC</h3>
-              <div class="technologies">
-                <img src="/img/js-icon.svg" alt="JavaScript">
-              </div>
-            </div>
-            <div class="project-overlay">
-              <p>jun.24</p>
-              <div class="project-btns">
-                <a href="https://calculadora-imc-blue-seven.vercel.app/" class="github-btn"><img
-                    src="./img/github-icon.svg" alt="View on Github" class="github-icon"></a>
-                <a href="https://calculadora-imc-blue-seven.vercel.app/" class="view-more-btn">Project On</a>
-              </div>
+        <div class="project-card">
+          <img src="./img/calculadora_imc.png" alt="Calculadora IMC" class="project-image">
+          <div class="dark-overlay"></div>
+          <div class="project-info">
+            <h3>Calculadora IMC</h3>
+            <div class="technologies">
+              <img src="/img/js-icon.svg" alt="JavaScript">
             </div>
           </div>
+          <div class="project-overlay">
+            <p>jun.24</p>
+            <div class="project-btns">
+              <a href="https://calculadora-imc-blue-seven.vercel.app/" class="github-btn"><img
+                  src="./img/github-icon.svg" alt="View on Github" class="github-icon"></a>
+              <a href="https://calculadora-imc-blue-seven.vercel.app/" class="view-more-btn">Project On</a>
+            </div>
+          </div>
+        </div>
 
 
       </div>
     </section>
 
-    <section class="gallery">
+    <section id="gallery">
       <div class="title-section">
         <h1>Galeria de<span> Criativos</span></h1>
       </div>
@@ -367,30 +368,41 @@
             </a>
           </div>
         </div>
-      <div class="show-more" id="showMore">
-        <i class="fa-solid fa-angles-down"></i> Veja mais
-      </div>
-      <div class="show-less" id="showLess" style="display: none;">
-        <i class="fa-solid fa-angles-up"></i> Veja menos
-      </div>
+        <div class="show-more" id="showMore">
+          <i class="fa-solid fa-angles-down"></i> Veja mais
+        </div>
+        <div class="show-less" id="showLess" style="display: none;">
+          <i class="fa-solid fa-angles-up"></i> Veja menos
+        </div>
 
       </div>
 
-      
+
     </section>
-    
-    <section class="contact">
+
+    <section id="contact">
       <div class="title-section">
         <h1>Fale<span> Comigo</span></h1>
       </div>
-
       <div class="contact-container">
-        <input type="text" aria-label="name" placeholder="Nome">
-        <input type="email" aria-label="email" placeholder="Email">
-        <input type="text" aria-label="Telefone" placeholder="Telefone">
-        <button type="submit" class="contact-btn">Enviar</button>
-      </div>
+        <div class="form-container">
+          <input type="text" aria-label="name" placeholder="Nome">
+          <input type="email" aria-label="email" placeholder="Email">
+          <input type="text" aria-label="Telefone" placeholder="Telefone">
+          <button type="submit" class="contact-btn">Enviar</button>
+        </div>
+        <div class="socials-container">
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/priscillatrevizan" target="_blank" class="contact-link">
+              <i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <div class="socials">
+            <a href="https://www.github.com/priscillatrevizan" target="_blank" class="contact-link">
+              <i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
 
+      </div>
     </section>
 
     <section class="maps">
@@ -416,6 +428,8 @@
   });
 </script>
 <script src="./maps.js"></script>
+
+
 
 
 </html>
