@@ -63,3 +63,34 @@ document.getElementById("showLess").addEventListener("click", function () {
   document.getElementById("showMore").style.display = "inline-block";
   document.getElementById("showLess").style.display = "none";
 });
+
+/*form*/
+function validateForm(event) {
+  event.preventDefault(); // Impede o envio do formulário
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let phone = document.getElementById("phone").value;
+  let emailValid = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
+  let phoneValid = /^[0-9]{10,11}$/;
+
+  if (name === "" || email === "" || phone === "") {
+    alert("Preencha todos os campos!");
+    return false;
+  }
+  if (name.length < 3) {
+    alert("Nome inválido!");
+    return false;
+  }
+  if (!emailValid.test(email)) {
+    alert("Por gentileza, preencha um e-mail válido!");
+    return false;
+  }
+  if (!phoneValid.test(phone)) {
+    alert("Por gentileza, preencha um telefone válido!");
+    return false;
+  }
+
+  alert("Formulário enviado com sucesso!");
+  return true; // Permite o envio do formulário se todas as validações passarem
+}
