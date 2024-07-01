@@ -205,6 +205,20 @@ a.logo-container span {
     width: 20px;
     border-top: 3px solid;
   }
+
+  #hamburguer.active {
+    border-top-color: transparent;
+  }
+
+  #hamburguer.active::before {
+    transform: rotate(-135deg);
+  }
+
+  #hamburguer.active::after {
+    transform: rotate(135deg);
+    top: -8px;
+  }
+
   #hamburguer::after,
   #hamburguer::before {
     content: "";
@@ -978,8 +992,8 @@ button.criative-btn {
 }
 
 #map {
-  height: 200px; /* A altura é de 400 pixels */
-  width: 100%; /* A largura é a largura da página web */
+  height: 400px; /* Defina a altura do mapa para 400 pixels */
+  width: 100%;
   margin: 50px 0;
 }
 

@@ -1,13 +1,19 @@
-//btn-mobile
+// btn-mobile
 const btnMobile = document.getElementById("btn-mobile");
+
 function toggleMenu(event) {
   if (event.type === "touchstart") event.preventDefault();
   const nav = document.getElementById("nav");
   nav.classList.toggle("active");
+
+  // Adiciona/remover classe active no hamburguer para animação
+  const hamburguer = document.getElementById("hamburguer");
+  hamburguer.classList.toggle("active");
 }
 
-btnMobile.addEventListener("click", toggleMenu, { passive: true });
-btnMobile.addEventListener("touchstart", toggleMenu, { passive: true }); // melhoria performance mobile
+// Adiciona event listeners para click e touchstart
+btnMobile.addEventListener("click", toggleMenu);
+btnMobile.addEventListener("touchstart", toggleMenu);
 
 /*selection language*/
 document.addEventListener("DOMContentLoaded", function () {
@@ -71,7 +77,7 @@ function validateForm(event) {
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
   let phone = document.getElementById("phone").value;
-  let emailValid = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
+  let emailValid = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
   let phoneValid = /^[0-9]{10,11}$/;
 
   if (name === "" || email === "" || phone === "") {
@@ -79,7 +85,7 @@ function validateForm(event) {
     return false;
   }
   if (name.length < 3) {
-    alert("Nome inválido!");
+    alert("Por gentileza,preencha um nome válido!");
     return false;
   }
   if (!emailValid.test(email)) {

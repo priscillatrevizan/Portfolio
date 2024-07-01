@@ -1,34 +1,30 @@
-// Initialize and add the map
-let map;
+// Definindo a altura do contêiner do mapa via CSS
+document.getElementById("map").style.height = "500px";
 
-async function initMap() {
-  // The location of União da Vitória
-  const position = { lat: -26.22186851501465, lng: -51.086273193359375 };
-  // Request needed libraries.
-  //@ts-ignore
-  const { Map } = await google.maps.importLibrary("maps");
-  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+// Inicializando o mapa em União da Vitória com zoom 13
+var map = L.map("map").setView([-26.2304, -51.0866], 13);
 
-  // The map, centered at União da Vitória
-  map = new Map(document.getElementById("map"), {
-    zoom: 12,
-    center: position,
-    mapId: "DEMO_MAP_ID",
-  });
+// Usando o estilo escuro do CartoDB
+L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
+  maxZoom: 19,
+  attribution:
+    '&copy; <a href="https://carto.com/attributions">CARTO</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+}).addTo(map);
 
-  // The marker, positioned at União da Vitória
-  const marker = new AdvancedMarkerElement({
-    map: map,
-    position: position,
-    title: "União da Vitória",
-  });
+// Adicionando um marcador com popup
+var marker = L.marker([-26.2304, -51.0866])
+  .addTo(map)
+  .bindPopup("<b>Bem vindo a </b> </br> União da Vitória")
+  .openPopup();
+
+// Lidando com eventos de clique no mapa
+var popup = L.popup();
+
+function onMapClick(e) {
+  popup
+    .setLatLng(e.latlng)
+    .setContent("Você clicou no mapa em " + e.latlng.toString())
+    .openOn(map);
 }
 
-initMap();
-
-// The marker, positioned at União da Vitória
-const marker = new AdvancedMarkerElement({
-  map: map,
-  position: position,
-  title: "União da Vitória",
-});
+map.on("click", onMapClick);
