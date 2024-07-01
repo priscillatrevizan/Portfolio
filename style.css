@@ -9,7 +9,7 @@
 :root {
   --font-title: "Poppins", sans-serif;
   --font-text: "IBM Plex Mono", monospace;
-  --color-text-menu: #909090;
+  --color-text-menu: #bbbbbb;
   --color-text-menu-hover: #f1f1f1;
   --btn-bg: rgba(255, 255, 255, 0.05);
   --btn-bg-hover: rgba(255, 255, 255, 0.08);
@@ -26,7 +26,7 @@ body {
 button {
   margin-left: 1em;
   display: inline-flex;
-  padding: 1em 1.5em;
+  padding: 1.2em 2em;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -47,18 +47,26 @@ button:hover {
   box-shadow: none;
 }
 
-button:active {
-  background: rgba(167, 74, 175, 0.09);
-  font-weight: 700;
-  box-shadow: 0px 2px 2px 0px rgba(255, 255, 255, 0.25) inset;
-}
-
 @media screen and (max-width: 600px) {
   button {
     font-size: 0.8em;
     gap: 10px;
   }
 }
+
+a:focus {
+  font-weight: 700;
+  outline: none;
+  border-bottom: 1px dashed var(--second-color);
+}
+
+button:focus {
+  font-weight: 700;
+  font-size: 1.01em;
+  outline: none;
+  box-shadow: 0px 2px 2px 0px var(--second-color) inherit;
+}
+
 .fa-brands {
   color: var(--second-color);
   font-size: 30px;
@@ -643,20 +651,23 @@ button.criative-btn {
   background: #555;
 }
 
-.projects {
+.projects,
+.video-info {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
 
-.projects p {
+.projects p,
+.video-info p {
   font-family: var(--font-text);
   color: var(--color-text-menu);
   margin-bottom: 100px;
 }
 
-.fa-lock {
+.fa-lock,
+.fa-star {
   margin: 0;
   width: 20px;
   color: var(--btn-bg-hover);
@@ -997,6 +1008,20 @@ button.criative-btn {
   margin: 50px 0;
 }
 
+/*video*/
+.video-container,
+.iframe-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.video-container iframe,
+.iframe-container iframe {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border: none;
+}
 /*footer*/
 
 .footer {

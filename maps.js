@@ -1,5 +1,5 @@
 // Definindo a altura do contêiner do mapa via CSS
-document.getElementById("map").style.height = "500px";
+document.getElementById("map").style.height = "200px";
 
 // Inicializando o mapa em União da Vitória com zoom 13
 var map = L.map("map").setView([-26.2304, -51.0866], 13);

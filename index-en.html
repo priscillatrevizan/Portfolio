@@ -1,86 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="canonical" href="https://pcodedesign.vercel.app/" />
-
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-  <link rel="shortcut icon" type="imagex/png" href="./img/logo_ico_pb.ico">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"></noscript>
+  <link rel="shortcut icon" type="image/png" href="./img/logo_ico_pb.ico">
   <!-- Slick Carousel CSS -->
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
   <!-- Font Awesome CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- leaflet map -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-  crossorigin=""/>
-   <!-- Make sure you put this AFTER Leaflet's CSS -->
- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
- integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
- crossorigin=""></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <title>P Code&Design</title>
 </head>
 
 <body>
   <header id="header">
     <a href="/index.html" class="logo-container">
-      <img id="logo" src="./img/logo 1.svg" alt="Globo com explosão de cores">
-
+      <img id="logo" src="./img/logo 1.svg" alt="Globe with explosion of colors" loading="lazy">
       <span>Priscilla</span>Trevizan
     </a>
 
     <section class="select">
       <div id="lang-toggle">
-        <a href="index.html" class="lang-toggle-mob"><span>EN / </span> PT</a>
+        <a href="/index.html" class="lang-toggle-mob">EN / <span> PT</span></a>
       </div>
 
-      <nav id="nav">
-        <button id="btn-mobile" aria-label="Abrir Menu">
+      <nav id="nav" role="navigation">
+        <button id="btn-mobile" aria-label="Open Menu" aria-expanded="false" aria-controls="menu">
           <span id="hamburguer" class="visually-hidden" aria-hidden="true"></span>
         </button>
-        <ul id="menu" role="menu">
-          <li><a href="index-en.html" class="language-toggle"><span>EN / </span> PT</a></li>
-          <li><a href="#hero" class="menu">About</a></li>
-          <li><a href="#hard-skills" class="menu">Skills</a></li>
-          <li><a href="#projects" class="menu">Projects</a></li>
-          <li><a href="#gallery" class="menu">Creative Portfolio</a></li>
-
+        <ul id="menu" role="menubar">
+          <li role="none"><a href="index-en.html" class="language-toggle" role="menuitem" aria-label="Change to English">EN / PT</a></li>
+          <li role="none"><a href="#hero" class="menu" role="menuitem" aria-label="About">About</a></li>
+          <li role="none"><a href="#hard-skills" class="menu" role="menuitem" aria-label="Hard Skills">Skills</a></li>
+          <li role="none"><a href="#projects" class="menu" role="menuitem" aria-label="Projects">Projects</a></li>
+          <li role="none"><a href="#gallery" class="menu" role="menuitem" aria-label="Creative Portfolio">Creative Portfolio</a></li>
         </ul>
-
       </nav>
-      <a href="#contact" class="menu"><button class="contact-btn" aria-label="Contato">Hello!</button></a>
-      </div>
-
+      
+      <a href="#contact" class="menu"><button class="contact-btn" aria-label="Contact">Hello!</button></a>
     </section>
   </header>
 
-  <main>
+  <main role="main">
     <section id="hero">
       <div class="hero-container">
         <div class="hero-image">
-          <img id="hero-img" src="./img/hero_img.svg" alt="mundo colorido IA">
+          <img id="hero-img" src="./img/hero_img.svg" alt="colorful world AI" loading="lazy">
         </div>
 
         <div class="presentation">
           <p>Code & Design</p>
           <h1>Priscilla<span> Trevizan</span></h1>
-          <p>It's a pleasure to welcome you here! Since I decided to follow the path of technology, the freedom to create solutions
-            innovation has been my main motivation. I'm looking to build a solid career and I'm lucky enough to
-            find talented people who share their knowledge with me. I am determined to evolve and
-            contribute significantly. To create, innovate and improve - whether in processes, systems or
-            relationships. Let's create something together?</p>
+          <p>It's a pleasure to welcome you here! Since I decided to follow the path of technology, the freedom to create innovative solutions has been my main motivation. I'm looking to build a solid career and I'm lucky to find talented people who share their knowledge with me. I'm determined to evolve and contribute significantly. To create, innovate, and improve - whether in processes, systems, or relationships. Let's create something together?</p>
           <div class="buttons">
             <a href="#projects"><button class="project-btn">Projects</button></a>
             <a href="#gallery"><button class="criative-btn">Creatives</button></a>
@@ -97,11 +80,10 @@
         <div class="skills">
           <div class="skills-col1">
             <div class="skills-col1-content">
-              <img src="./img/front-icon.svg" alt="Front-end Developer Icon">
+              <img src="./img/front-icon.svg" alt="Front-end Developer Icon" loading="lazy">
               <div>
                 <h3>Front-end Developer</h3>
-                <p>I value simple content structure, clean design patterns, and well-thought-out interactions.
-                </p>
+                <p>I value simple content structure, clean design patterns, and well-thought-out interactions.</p>
               </div>
             </div>
           </div>
@@ -125,24 +107,22 @@
         <div class="skills">
           <div class="skills-col1">
             <div class="skills-col1-content">
-              <img src="./img/UI-icon.svg" alt="UI/UX Designer Icon">
+              <img src="./img/UI-icon.svg" alt="UI/UX Designer Icon" loading="lazy">
               <div>
                 <h3>UI/UX Designer</h3>
-                <p>
-                  I value a simple structure, clean design, and well-planned interactions for a user-friendly experience.
-                  fluent and intuitive user.</p>
+                <p>I value a simple structure, clean design, and well-planned interactions for a user-friendly experience.</p>
               </div>
             </div>
           </div>
           <div class="skills-col2">
-            <h3>"Coisas" que gosto de projetar:</h3>
-            <p>UI, UX, Web, Aplicativos, Logotipos</p>
+            <h3>"Things" I like to design:</h3>
+            <p>UI, UX, Web, Apps, Logos</p>
           </div>
           <div class="skills-col3">
-            <h3>Ferramentas</h3>
-            <img src="./img/ai-icon.svg" alt="Github">
-            <img src="./img/xd-icon.svg" alt="Vue.js">
-            <img src="./img/ps-icon.svg" alt="JavaScript">
+            <h3>Tools</h3>
+            <img src="./img/ai-icon.svg" alt="Github" loading="lazy">
+            <img src="./img/xd-icon.svg" alt="Vue.js" loading="lazy">
+            <img src="./img/ps-icon.svg" alt="JavaScript" loading="lazy">
             <i class="fa-brands fa-figma"></i>
           </div>
         </div>
@@ -152,7 +132,7 @@
         <div class="skills">
           <div class="skills-col1">
             <div class="skills-col1-content">
-              <img src="./img/code-icon.svg" alt="Code Icon">
+              <img src="./img/code-icon.svg" alt="Code Icon" loading="lazy">
               <div>
                 <h3>Constantly updated</h3>
               </div>
@@ -167,7 +147,7 @@
         <div class="sectors">
           <div class="sector-item">
             <div class="sector-content">
-              <img src="./img/logo_ico_pb.ico" alt="Icon" class="icon" alt="Logotipo P Code e Design">
+              <img src="./img/logo_ico_pb.ico" alt="Icon" class="icon" alt="P Code and Design Logo" loading="lazy">
             </div>
           </div>
           <div class="sector-item">
@@ -187,7 +167,7 @@
           </div>
           <div class="sector-item">
             <div class="sector-content">
-              <img src="./img/logo_ico_pb.ico" alt="Icon" class="icon">
+              <img src="./img/logo_ico_pb.ico" alt="Icon" class="icon" loading="lazy">
             </div>
           </div>
           <div class="sector-item">
@@ -207,7 +187,7 @@
           </div>
           <div class="sector-item">
             <div class="sector-content">
-              <img src="./img/logo_ico_pb.ico" alt="Icon" class="icon">
+              <img src="./img/logo_ico_pb.ico" alt="Icon" class="icon" loading="lazy">
             </div>
           </div>
           <div class="sector-item">
@@ -225,9 +205,7 @@
               design
             </div>
           </div>
-
         </div>
-      </div>
       </div>
     </section>
 
@@ -238,10 +216,10 @@
 
       <div class="projects-container">
         <div class="project-card">
-          <img src="./img/calculadora_imc.png" alt="Calculadora IMC" class="project-image">
+          <img src="./img/calculadora_imc.png" class="project-image" alt="BMI Calculator" loading="lazy">
           <div class="dark-overlay"></div>
           <div class="project-info">
-            <h3>Calculadora IMC</h3>
+            <h3>BMI Calculator</h3>
             <div class="technologies">
               <i class="fa-brands fa-js"></i>
             </div>
@@ -249,18 +227,17 @@
           <div class="project-overlay">
             <p>jun.24</p>
             <div class="project-btns">
-              <a href="https://github.com/priscillatrevizan/Calculadora-IMC"
-                aria-label="Acessar repositório no GitHub"></a><i class="fa-brands fa-github github-btn"></i></a>
+              <a href="https://github.com/priscillatrevizan/Calculadora-IMC" aria-label="Access GitHub repository for BMI calculator project"></a><i class="fa-brands fa-github github-btn"></i></a>
               <a href="https://calculadora-imc-blue-seven.vercel.app/" class="view-more-btn">Project On</a>
             </div>
           </div>
         </div>
 
         <div class="project-card">
-          <img src="./img/forms.png" alt="Calculadora IMC" class="project-image">
+          <img src="./img/forms.png" class="project-image" alt="Product Registration Form" loading="lazy">
           <div class="dark-overlay"></div>
           <div class="project-info">
-            <h3>Forms cadastro de Produtos</h3>
+            <h3>Product Registration Forms</h3>
             <div class="technologies">
               <i class="fa-brands fa-js"></i>
             </div>
@@ -268,18 +245,17 @@
           <div class="project-overlay">
             <p>mar.24</p>
             <div class="project-btns">
-              <a href="https://github.com/priscillatrevizan/Forms-Cadastro-de-Produto"
-                aria-label="Acessar repositório no GitHub"></a><i class="fa-brands fa-github github-btn"></i></a>
+              <a href="https://github.com/priscillatrevizan/Forms-Cadastro-de-Produto" aria-label="Access GitHub repository for Product Registration Form project"></a><i class="fa-brands fa-github github-btn"></i></a>
               <a href="https://forms-ok.vercel.app/" class="view-more-btn">Project On</a>
             </div>
           </div>
         </div>
 
         <div class="project-card">
-          <img src="./img/desafio.png" alt="API Autentication" class="project-image">
+          <img src="./img/desafio.png" class="project-image" alt="API Authentication" loading="lazy">
           <div class="dark-overlay"></div>
           <div class="project-info">
-            <h3>API Autentication</h3>
+            <h3>API Authentication</h3>
             <div class="technologies">
               <i class="fa-brands fa-js"></i>
               <i class="fa-brands fa-node"></i>
@@ -288,19 +264,15 @@
           <div class="project-overlay">
             <p>jun.24</p>
             <div class="project-btns">
-              <a href="https://github.com/priscillatrevizan/API-Autentication"
-                aria-label="Acessar repositório no GitHub"></a><i class="fa-brands fa-github github-btn"></i></a>
-              <a href="https://priscillatrevizan.notion.site/Desafio-Potencia-Tech-Abr-24-b53b6abcc3394769a05365212f2108e8"
-                class="view-more-btn">Learn more</a>
+              <a href="https://github.com/priscillatrevizan/API-Autentication" aria-label="Access GitHub repository for API Authentication project"></a><i class="fa-brands fa-github github-btn"></i></a>
+              <a href="https://priscillatrevizan.notion.site/Desafio-Potencia-Tech-Abr-24-b53b6abcc3394769a05365212f2108e8" class="view-more-btn">Learn more</a>
             </div>
           </div>
         </div>
-
       </div>
       <div class="projects">
         <i class="fa-solid fa-lock"></i>
-        <p>In this session I present basic study and training projects, commercial projects are not exposed by
-          reasons for secrecy.</p>
+        <p>In this section, I present basic study and training projects, commercial projects are not exposed for confidentiality reasons.</p>
       </div>
     </section>
 
@@ -311,78 +283,69 @@
       <div class="image-container">
         <div class="row">
           <div class="image-item large">
-            <img src="./img/izing.jpg" alt="Izing">
-            <a href="https://www.figma.com/proto/VMULctSAVWujkTmPXnrhNI/Senior?page-id=11%3A6&node-id=295-122&viewport=-540%2C35%2C0.1&t=dXAUmkJMTZTXRN1V-1&scaling=min-zoom&content-scaling=fixed"
-              target="_blank" class="figma-link">
-              <img src="./img/figma-icon.svg" alt="View on Figma" class="figma-icon">
+            <img src="./img/izing.jpg" alt="Izing" loading="lazy">
+            <a href="https://www.figma.com/proto/VMULctSAVWujkTmPXnrhNI/Senior?page-id=11%3A6&node-id=295-122&viewport=-540%2C35%2C0.1&t=dXAUmkJMTZTXRN1V-1&scaling=min-zoom&content-scaling=fixed" target="_blank" class="figma-link">
+              <img src="./img/figma-icon.svg" class="figma-icon" alt="View on Figma" loading="lazy">
             </a>
           </div>
           <div class="image-item small">
-            <img src="./img/antonio.png" alt="Antonio-adv">
-            <a href="https://www.figma.com/proto/VMULctSAVWujkTmPXnrhNI/Senior?page-id=11%3A6&node-id=295-122&viewport=-540%2C35%2C0.1&t=dXAUmkJMTZTXRN1V-1&scaling=min-zoom&content-scaling=fixed"
-              target="_blank" class="figma-link">
-              <img src="./img/figma-icon.svg" alt="View on Figma" class="figma-icon">
+            <img src="./img/antonio.png" alt="Antonio-adv" loading="lazy">
+            <a href="https://www.figma.com/proto/VMULctSAVWujkTmPXnrhNI/Senior?page-id=11%3A6&node-id=295-122&viewport=-540%2C35%2C0.1&t=dXAUmkJMTZTXRN1V-1&scaling=min-zoom&content-scaling=fixed" target="_blank" class="figma-link">
+              <img src="./img/figma-icon.svg" class="figma-icon" alt="View on Figma" loading="lazy">
             </a>
           </div>
         </div>
         <div class="row">
           <div class="image-item">
-            <img src="./img/oBarbeiro.jpg" alt="O Barbeiro">
-            <a href="https://www.figma.com/proto/VMULctSAVWujkTmPXnrhNI/Senior?page-id=11%3A6&node-id=295-122&viewport=-540%2C35%2C0.1&t=dXAUmkJMTZTXRN1V-1&scaling=min-zoom&content-scaling=fixed"
-              target="_blank" class="figma-link">
-              <img src="./img/figma-icon.svg" alt="View on Figma" class="figma-icon">
+            <img src="./img/oBarbeiro.jpg" alt="The Barber" loading="lazy">
+            <a href="https://www.figma.com/proto/VMULctSAVWujkTmPXnrhNI/Senior?page-id=11%3A6&node-id=295-122&viewport=-540%2C35%2C0.1&t=dXAUmkJMTZTXRN1V-1&scaling=min-zoom&content-scaling=fixed" target="_blank" class="figma-link">
+              <img src="./img/figma-icon.svg" alt="View on Figma" class="figma-icon" loading="lazy">
             </a>
           </div>
           <div class="image-item">
-            <img src="./img/Senior.jpg" alt="Senior">
-            <a href="https://www.figma.com/proto/U2f1b8wddyuStTSAIhXfUJ/Izing?page-id=2763%3A185&node-id=2763-188&viewport=728%2C536%2C0.09&t=qXLMyGeOOQtULutg-1&scaling=min-zoom&content-scaling=fixed"
-              target="_blank" class="figma-link">
-              <img src="./img/figma-icon.svg" alt="View on Figma" class="figma-icon">
+            <img src="./img/Senior.jpg" alt="Senior" loading="lazy">
+            <a href="https://www.figma.com/proto/U2f1b8wddyuStTSAIhXfUJ/Izing?page-id=2763%3A185&node-id=2763-188&viewport=728%2C536%2C0.09&t=qXLMyGeOOQtULutg-1&scaling=min-zoom&content-scaling=fixed" target="_blank" class="figma-link">
+              <img src="./img/figma-icon.svg" class="figma-icon" alt="View on Figma" loading="lazy">
             </a>
           </div>
         </div>
         <div class="row hidden-mobile">
           <div class="image-item large">
-            <img src="./img/tambore.jpg" alt="Tambore">
-            <a href="https://www.instagram.com/p/CvqAw_LPjhn/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA=="
-              target="_blank" class="instagram-link">
-              <img src="./img/instagram-icon.svg" alt="View on Figma" class="instagram-icon">
+            <img src="./img/tambore.jpg" alt="Tambore" loading="lazy">
+            <a href="https://www.instagram.com/p/CvqAw_LPjhn/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" target="_blank" class="instagram-link">
+              <img src="./img/instagram-icon.svg" class="instagram-icon" alt="View on Instagram" loading="lazy">
             </a>
           </div>
           <div class="image-item small">
-            <img src="./img/developers.png" alt="Developers">
-            <a href="httphttps://www.figma.com/proto/kqrpv8aySNrJwU4BWdjz13/Developers?page-id=1522%3A168&node-id=1522-503&viewport=728%2C483%2C0.18&t=HtQaNDtuZmE7xB8J-1&scaling=min-zoom&content-scaling=fixed"
-              target="_blank" class="figma-link">
-              <img src="./img/figma-icon.svg" alt="View on Figma" class="figma-icon">
+            <img src="./img/developers.png" alt="Developers" loading="lazy">
+            <a href="https://www.figma.com/proto/kqrpv8aySNrJwU4BWdjz13/Developers?page-id=1522%3A168&node-id=1522-503&viewport=728%2C483%2C0.18&t=HtQaNDtuZmE7xB8J-1&scaling=min-zoom&content-scaling=fixed" target="_blank" class="figma-link">
+              <img src="./img/figma-icon.svg" class="figma-icon" alt="View on Figma" loading="lazy">
             </a>
           </div>
           <div class="image-item small">
-            <img src="./img/Rifeirinho.jpg" alt="Rifeirinho">
-            <a href="https://www.figma.com/proto/MdNFoImmlK8j5W320MASiS/Rifeirinho?page-id=0%3A1&node-id=169-438&viewport=626%2C-212%2C0.33&t=6jW4u4ydERIA0iAC-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=169%3A438"
-              target="_blank" class="figma-link">
-              <img src="./img/figma-icon.svg" alt="View on Figma" class="figma-icon">
+            <img src="./img/Rifeirinho.jpg" alt="Rifeirinho" loading="lazy">
+            <a href="https://www.figma.com/proto/MdNFoImmlK8j5W320MASiS/Rifeirinho?page-id=0%3A1&node-id=169-438&viewport=626%2C-212%2C0.33&t=6jW4u4ydERIA0iAC-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=169%3A438" target="_blank" class="figma-link">
+              <img src="./img/figma-icon.svg" class="figma-icon" alt="View on Figma" loading="lazy">
             </a>
           </div>
         </div>
         <div class="row hidden-mobile">
           <div class="image-item">
-            <img src="./img/Hackaton.png" alt="Hackaton">
-            <a href="https:https://www.figma.com/proto/vibzqDhDJojaNTZxLGILR4/Hackaton_OrangeJuice2023-(FDS)?page-id=850%3A1913&node-id=936-2382&viewport=106%2C547%2C0.14&t=bWck4thHVJWkuZuf-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=936%3A2382"
-              target="_blank" class="figma-link">
-              <img src="./img/figma-icon.svg" alt="View on Figma" class="figma-icon">
+            <img src="./img/Hackaton.png" alt="Hackathon" loading="lazy">
+            <a href="https://www.figma.com/proto/vibzqDhDJojaNTZxLGILR4/Hackaton_OrangeJuice2023-(FDS)?page-id=850%3A1913&node-id=936-2382&viewport=106%2C547%2C0.14&t=bWck4thHVJWkuZuf-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=936%3A2382" target="_blank" class="figma-link">
+              <img src="./img/figma-icon.svg" class="figma-icon" alt="View on Figma" loading="lazy">
             </a>
           </div>
           <div class="image-item">
-            <img src="./img/estacao_da_beleza.jpg" alt="Estação da Beleza">
-            <a href="https://www.figma.com/proto/xrITtDPnlRVERhGDzF7bpk/Estacao_da_Beleza?page-id=93%3A2909&node-id=93-3188&viewport=547%2C483%2C0.25&t=AzZNwllogVlYTbLe-1&scaling=min-zoom&content-scaling=fixed"
-              target="_blank" class="figma-link">
-              <img src="./img/figma-icon.svg" alt="View on Figma" class="figma-icon">
+            <img src="./img/estacao_da_beleza.jpg" alt="Beauty Station" loading="lazy">
+            <a href="https://www.figma.com/proto/xrITtDPnlRVERhGDzF7bpk/Estacao_da_Beleza?page-id=93%3A2909&node-id=93-3188&viewport=547%2C483%2C0.25&t=AzZNwllogVlYTbLe-1&scaling=min-zoom&content-scaling=fixed" target="_blank" class="figma-link">
+              <img src="./img/figma-icon.svg" class="figma-icon" alt="View on Figma" loading="lazy">
             </a>
           </div>
           <div class="image-item">
-            <img src="./img/BigFood_folder.png" alt="big_food">
+            <img src="./img/BigFood_folder.png" alt="Big Food" loading="lazy">
             <a href="https://www.behance.net/gallery/191689091/Big-food" target="_blank" class="behance-link">
-              <img src="./img/behance-icon.svg" alt="View on Behance" class="behance-icon">
+              <img src="./img/behance-icon.svg" class="behance-icon" alt="View on Behance" loading="lazy">
             </a>
           </div>
         </div>
@@ -392,10 +355,7 @@
         <div class="show-less" id="showLess" style="display: none;">
           <i class="fa-solid fa-angles-up"></i> See less
         </div>
-
       </div>
-
-
     </section>
 
     <section id="contact">
@@ -432,25 +392,39 @@
         </div>
       </div>
     </section>
-    
 
     <section class="maps">
       <div id="map"></div>
     </section>
-    
-    <footer>
+
+    <section id="bonus">
+      <div class="title-section">
+        <h2>Bonus<span> Section</span></h2>
+      </div>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        <div class="video-info">
+          <i class="fa-solid fa-star"></i>
+          <p>In this section, I present how developing this site was.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer role="contentinfo">
       <div class="footer">
         <h3>© 2024 P Code & Design</h3>
-        <p>Created ♥ by por Priscilla Trevizan</p>
+        <p>Created with ♥ by Priscilla Trevizan</p>
       </div>
     </footer>
   </main>
 </body>
 <!-- Slick Carousel JS -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<script src="./carousel.js"></script>
-<script src="./index.js"></script>
-<script src="/maps.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" defer></script>
+
+<!-- JS -->
+<script src="./carousel.js" defer></script>
+<script src="./index.js" defer></script>
+<script src="/maps.js" defer></script>
 
 </html>
